@@ -1,14 +1,13 @@
-import Cart from './components/Cart/Cart';
-import Layout from './components/Layout/Layout';
-import Products from './components/Shop/Products';
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import HomePage from "./pages/Home";
+
+const router = createBrowserRouter([
+	{ path: '', element: <HomePage />},
+	{}
+])
 
 function App() {
-	return (
-		<Layout>
-			<Cart />
-			<Products />
-		</Layout>
-	);
+	return <RouterProvider router={router}/>;
 }
 
 export default App;
